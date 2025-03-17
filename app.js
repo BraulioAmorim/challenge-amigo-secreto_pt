@@ -11,6 +11,12 @@ function adicionarAmigo() {
         return;
     }
 
+    // Capricho: Validação: Impede a inserção de nomes duplicados
+    if (listaDeAmigos.includes(nome)) {
+        alert("Este nome já foi adicionado!");
+        return;
+    }
+
     listaDeAmigos.push(nome); 
 
     input.value = "";
@@ -27,7 +33,23 @@ function atualizarLista() {
         const li = document.createElement("li");
         li.textContent = listaDeAmigos[i]; // Define o nome do amigo
         ul.appendChild(li); // Adiciona o elemento à lista no HTML
+
+         // Capricho: Botão de remover nome
+        const botaoRemover = document.createElement("button");
+        botaoRemover.textContent = "❌";
+        botaoRemover.classList.add("remove-button");
+        botaoRemover.onclick = () => removerAmigo(i);
+
+        li.appendChild(botaoRemover);
+        ul.appendChild(li); // Adiciona o elemento à lista no HTML
+
     }
+}
+
+// Capricho: Função para remover um nome da lista
+function removerAmigo(index) {
+    listaDeAmigos.splice(index, 1); // Remove o nome do array
+    atualizarLista(); // Atualiza a lista na interface
 }
 
 // sortear um amigo aleatoriamente
@@ -48,3 +70,5 @@ function sortearAmigo() {
     const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<li>🎉 Amigo Sorteado: <strong>${amigoSorteado}</strong> 🎉</li>`;
 }
+
+    
