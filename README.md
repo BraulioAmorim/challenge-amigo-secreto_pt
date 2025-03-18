@@ -66,6 +66,16 @@ O vídeo mostra a adição de nomes, remoção de participantes e o sorteio em a
 
 ---
 
+## 🌐 Teste o Jogo Online  
+
+🔎 **Acesse agora e jogue diretamente no navegador:**  
+[🎮 Jogar Amigo Secreto](https://braulioamorim.github.io/challenge-amigo-secreto_pt/)  
+
+A versão publicada permite que você **adicione nomes, remova participantes e realize o sorteio** de forma rápida e interativa! 🎲✨  
+
+✅ **Não precisa instalar nada, basta acessar e se divertir!** 🚀
+
+---
 ## 🚀 Tecnologias Utilizadas
 
 🛠 **HTML5** → Estrutura da página  
